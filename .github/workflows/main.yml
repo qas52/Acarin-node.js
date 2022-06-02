@@ -14,7 +14,7 @@ jobs:
   on-success:
     runs-on: ubuntu-latest
     needs: call-build-test
-    if: ${{ needs.call-build-test.outputs.conclusion == 'success' }}
+    #if: ${{ needs.call-build-test.outputs.conclusion == 'success' }}
     
     steps:
-      - run: echo 'The triggering workflow passed'
+      - run: echo ${{needs.call-build-test.outputs.conclusion}}
