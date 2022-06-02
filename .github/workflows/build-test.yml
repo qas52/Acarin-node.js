@@ -17,6 +17,8 @@ jobs:
                npm install
                npm run test
       - run: npm run coverage
+    outputs:
+         conclusion: 'success'
       
   #merge:
     #runs-on: ubuntu-latest
