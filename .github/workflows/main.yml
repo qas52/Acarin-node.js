@@ -17,4 +17,4 @@ jobs:
     #if: ${{ needs.call-build-test.outputs.conclusion == 'success' }}
     
     steps:
-      - run: echo "${{needs.call-build-test.outputs.conclusion}}"
+      - run: echo ${{needs.call-build-test.outputs.conclusion}}
