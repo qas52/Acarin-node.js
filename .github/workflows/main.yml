@@ -13,7 +13,7 @@ jobs:
   
   on-success:
     runs-on: ubuntu-latest
-    if: ${{ needs.call-build-test.result == 'success' }}
+    if: ${{ needs.call-build-test.result == 'fail' }}
     needs: call-build-test
     steps:
       - run: echo ${{ needs.call-build-test.result }}
