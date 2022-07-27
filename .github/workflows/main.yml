@@ -17,7 +17,7 @@ jobs:
     needs: call-build-test
     steps:
       - uses: actions/checkout@main
-      - name: upload to s3
+        name: upload to s3
       - uses: jakejarvis/s3-sync-action@master
         with:
          args: --acl public-read --follow-symlinks --delete
